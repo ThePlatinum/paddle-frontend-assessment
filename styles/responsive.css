@@ -1,0 +1,28 @@
+.d-flex {
+  display: flex;
+}
+
+.container {
+  padding: 0px 5vw;
+}
+
+.card {
+  padding: 1.5rem;
+  text-decoration: none;
+  border: 1px solid #EEEEEE;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.main {
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 720px) {
+}
+
+@media (max-width: 340px) {
+}
