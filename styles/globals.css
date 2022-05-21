@@ -5,6 +5,7 @@
   --primary-dark-bg-color: #693024;
   --secondary-dark-color: #260040;
   --btn-light-color: #640065;
+  --btn-light-color-transparent: #64006580;
 }
 
 html, body {
@@ -25,4 +26,13 @@ a {
 
 body::-webkit-scrollbar{
   display: none;
+}
+
+
+.bx{
+  margin: 5px;
+  font-size: larger;
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid var(--btn-light-color);
 }

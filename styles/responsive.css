@@ -9,6 +9,9 @@
 .d-flex {
   display: flex;
 }
+.flex-column {
+  flex-direction: column;
+}
 
 /* Components */
 .card {
@@ -51,7 +54,11 @@
   transition: 0.5s ease;
 }
 @media (max-width: 720px) {
+  /* Layouts */
+.container { padding: 0px 3vw; }
 }
 
 @media (max-width: 340px) {
+  /* Layouts */
+.container { padding: 0px 1vw; }
 }
