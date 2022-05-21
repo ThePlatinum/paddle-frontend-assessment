@@ -11,7 +11,7 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: Helvetica Neue, sans-serif;
+  font-family: 'Montserrat', Helvetica Neue, sans-serif;
   background-color: var(--dark-bg-color) ;
 }
 
@@ -26,6 +26,10 @@ a {
 
 body::-webkit-scrollbar{
   display: none;
+}
+
+p{
+  font-weight: lighter;
 }
 
 
