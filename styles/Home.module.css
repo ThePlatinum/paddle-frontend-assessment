@@ -1,4 +1,23 @@
 
+.nav ul li a{
+  padding: 0px 2vw;
+}
+
+.btn {
+  padding: 0.75rem;
+  border-radius: 20px;
+  border: 1px solid var(--light-color);
+  background-color: var(--light-color);
+  color: white;
+  text-transform: uppercase;
+  font-size: small;
+  transition: 0.5s ease;
+}
+
+.btn a:hover{
+  border-bottom: none !important;
+  transition: none !important;
+}
 
 @media (max-width: 600px) {
   

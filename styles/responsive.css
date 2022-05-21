@@ -1,11 +1,16 @@
+/* Layouts */
+.container { padding: 0px 5vw; }
+
+.main {
+  min-height: 100vh;
+  color: white;
+}
+
 .d-flex {
   display: flex;
 }
 
-.container {
-  padding: 0px 5vw;
-}
-
+/* Components */
 .card {
   padding: 1.5rem;
   text-decoration: none;
@@ -14,14 +19,37 @@
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.main {
-  min-height: 100vh;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  color: white
+/* Spaces */
+.py-3 {
+  padding: 0.75rem 0;
 }
 
+/* Nav */
+.nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.nav ul {
+  display: flex;
+  align-items: center;
+}
+.nav ul{
+  list-style: none;
+  list-style-type: none;
+}
+.nav ul li a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: small;
+  text-transform: uppercase !important;
+}
+.nav ul li a:hover{
+  border-bottom: 3px solid var(--btn-light-color);
+  transition: 0.5s ease;
+}
 @media (max-width: 720px) {
 }
 
