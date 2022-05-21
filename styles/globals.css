@@ -1,8 +1,17 @@
+:root {
+  /* ===== Colors ===== */
+  --light-color: #5001C4;
+  --dark-bg-color: #140126;
+  --primary-dark-bg-color: #693024;
+  --secondary-dark-color: #260040;
+  --btn-light-color: #640065;
+}
+
 html, body {
   padding: 0;
   margin: 0;
   font-family: Helvetica Neue, sans-serif;
-  background-color: #FFFFFF ;
+  background-color: var(--dark-bg-color) ;
 }
 
 a {
@@ -12,4 +21,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
