@@ -21,7 +21,6 @@ export default function GitHub() {
     console.log(repos);
   }, [repos])
 
-
   // Costume Pagination
   // 
   // useEffect(() => {
@@ -29,7 +28,6 @@ export default function GitHub() {
   //   document.addEventListener("scroll", () => {
   //     let header = document.querySelector('.loader');
   //     let rect = header.getBoundingClientRect();
-
   //     if (
   //       rect.top >= 0 &&
   //       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
@@ -66,7 +64,7 @@ export default function GitHub() {
                   <img src={repo.owner.avatar_url} width={150} height={150} />
                   <div className={`${s.card_body}`}>
                     <h4>{repo.name}</h4>
-                    <p> {repo.full_name} </p>
+                    {/* <p> {repo.full_name} </p> */}
                     <p> {repo.description} </p>
                     <div className={`${s.details} d-flex`}>
                       <div className="box star">
