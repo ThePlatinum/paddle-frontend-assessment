@@ -32,6 +32,16 @@ p{
   font-weight: lighter;
 }
 
+input{
+  background-color: transparent;
+  border: none;
+  padding: 2vh 1.5vw;
+  color: white;
+}
+
+input:focus{
+  outline: none;
+}
 
 .bx{
   margin: 5px;
@@ -39,4 +49,13 @@ p{
   padding: 3px;
   border-radius: 10px;
   border: 1px solid var(--btn-light-color);
+}
+
+@media (max-width: 720px) {
+  *{
+    font-size: small;
+  }
+  input{
+    padding: 2vh 3vw;
+  }
 }

@@ -4,6 +4,12 @@
   justify-content: space-between;
 }
 
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .nav ul li a {
   padding: 0px 2vw;
 }
@@ -35,17 +41,73 @@
   transition: none !important;
 }
 
+.body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10vh 5vw;
+  gap: 2vh;
+  text-align: center;
+}
+.body h1{
+  font-size: 2.5rem;
+  margin: 0px;
+}
+
+.timer .timer__item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5vw;
+  min-width: 8vw;
+  background-color: white;
+  color: black;
+}
+.timer .timer__item h3{
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+}
+.timer .timer__item p{
+  margin: 0px;
+  padding: 0px;
+}
+
+.name {
+  gap: 1vw;
+}
+
+.name input{
+  min-width: 17vw;
+  border-bottom: 1px solid var(--btn-light-color);
+  font-size: small;
+  color: white;
+}
+
+.email{
+  background-color: white;
+  border-radius: 20px;
+}
+
+.email input[type='email']{
+  min-width: 27vw;
+  font-size: small;
+}
+
 .footer {
   border: 1px solid var(--btn-light-color);
   background-color: var(--btn-light-color-transparent);
-  margin: 0px 15vw;
-  padding: 5vh 5vw;
+  padding: 15vh 5vw 5vh 5vw;
   border-radius: 30vh 30vh 0px 0px;
   justify-content: center;
   align-items: center;
-  color: gray;
+  color: #B6B6B6D8;
   font-size: small;
   text-align: center;
+  gap: 1vh;
 }
 
 .legals {
@@ -58,10 +120,27 @@
 }
 
 @media (max-width: 600px) {
-
+  .name {
+    flex-direction: column;
+    gap: 3vh;
+    padding: 2vh 0px;
+  }
+  .name input, .email input{
+    min-width: 80vw;
+  }
+  .email{
+    flex-direction: column;
+    gap: 3vh;
+    background-color: transparent;
+  }
+  .email input[type='email']{
+    border-bottom: 1px solid var(--btn-light-color);
+  }
+  .timer .timer__item{
+    margin: 1vw;
+  }
   .footer {
-    margin: 0px 0vw;
-    padding: 3vh 2vh 3vw;
+    padding: 10vh 3vw 3vh 3vw;
     border-radius: 20vh 20vh 0px 0px;
   }
 }

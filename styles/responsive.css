@@ -1,5 +1,5 @@
 /* Layouts */
-.container { padding: 0px 5vw; }
+.container { padding: 0px 10vw; }
 
 .main {
   min-height: 100vh;
@@ -15,11 +15,9 @@
 
 /* Components */
 .card {
-  padding: 1.5rem;
+  padding: 1rem;
   text-decoration: none;
-  border: 1px solid #EEEEEE;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 /* Spaces */
@@ -31,7 +29,7 @@
 .nav {
   flex-grow: 1;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 .nav ul {
