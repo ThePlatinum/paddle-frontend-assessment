@@ -7,20 +7,48 @@ export default function GitHub() {
   let URL = 'https://api.github.com/search/repositories?q=created:>2021-08-13&sort=stars&order=desc'
   const [repos, setRepos] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch(URL)
-    .then(res=>res.json())
-    .then(res=>{
-      setRepos(res.items)
-      console.log(repos);
-    })
-    .catch(e=>console.log(e))
-  },[])
+      .then(res => res.json())
+      .then(res => {
+        setRepos(res.items)
+        console.log(repos);
+      })
+      .catch(e => console.log(e))
+  }, [])
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log(repos);
-  },[repos])
-  
+  }, [repos])
+
+
+  // Costume Pagination
+  // 
+  // useEffect(() => {
+  //   URL = URL+ "page="
+  //   document.addEventListener("scroll", () => {
+  //     let header = document.querySelector('.loader');
+  //     let rect = header.getBoundingClientRect();
+
+  //     if (
+  //       rect.top >= 0 &&
+  //       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  //     ) {
+  //       // In view
+  //       let page = Math.floor(repos.length / 30) + 1// Shows 30 page per load
+  //       URL = URL+ page
+  //       console.log('URL: ', URL);
+  //       fetch(URL)
+  //         .then(res => res.json())
+  //         .then(res => {
+  //           setRepos([... res.items])
+  //           console.log(repos);
+  //         })
+  //         .catch(e => console.log(e))
+  //     }
+  //   });
+  // }, []);
+
   return (
     <div>
       <Head>
@@ -31,8 +59,8 @@ export default function GitHub() {
       <main className={`${s.main} main`}>
 
         <div className={s.body}>
-          {repos?.map((repo, i)=>{
-            return(
+          {repos?.map((repo, i) => {
+            return (
               <div className='py-3' key={i}>
                 <div className={`${s.card} card d-flex `}>
                   <img src={repo.owner.avatar_url} width={150} height={150} />
@@ -49,8 +77,8 @@ export default function GitHub() {
                       </div>
                       <div className="since">
                         Submitted <b> {
-                          Math.floor(( new Date().getTime() - new Date(repo.created_at).getTime() ) / (86400000))
-                          } </b> days ago by <b> {repo.owner.login} </b>
+                          Math.floor((new Date().getTime() - new Date(repo.created_at).getTime()) / (86400000))
+                        } </b> days ago by <b> {repo.owner.login} </b>
                       </div>
                     </div>
                   </div>
@@ -58,8 +86,8 @@ export default function GitHub() {
               </div>)
           })}
 
-          <div className='py-5 text-center'>
-          Loading...
+          <div className='loader py-5 text-center'>
+            Loading...
           </div>
         </div>
 
