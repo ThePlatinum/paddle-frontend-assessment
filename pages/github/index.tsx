@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image';
 import { useEffect, useState } from 'react'
 import s from "./Github.module.css"
 
@@ -27,26 +26,9 @@ export default function GitHub() {
       <Head>
         <title>Trending Repos</title>
         <meta name="description" content="Most starred Github repos created in the last 30 days" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={`${s.main} main container`}>
-        <header className={`${s.header} d-flex py-3`}>
-          <img src="/favicon.ico" alt="logo" width={50} height={50} />
-          <div className={`nav ${s.nav}`}>
-            <ul>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li className={`${s.btn}`}>
-                <a href="#">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </header>
+      <main className={`${s.main} main`}>
 
         <div className={s.body}>
           {repos?.map((repo, i)=>{
