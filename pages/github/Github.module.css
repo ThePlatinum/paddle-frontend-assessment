@@ -1,0 +1,37 @@
+.body{
+  padding-top: 5vh;
+}
+
+.card img {
+  border-radius: 10px;
+}
+
+.card_body {
+  padding: 0 1.5vw;
+}
+
+.details {
+  gap: 1vw;
+  align-items: center;
+}
+
+.footer {
+  padding: 5vh 5vw;
+  margin-top: 15vh;
+  border-top: 1px solid #B6B6B6D8;
+  justify-content: center;
+  align-items: center;
+  color: #B6B6B6D8;
+  font-size: small;
+  text-align: center;
+  gap: 1vh;
+}
+
+.legals {
+  justify-content: space-between;
+  gap: 4vw;
+}
+
+.copyright {
+  margin-top: 2vh;
+}

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import s from '../styles/Home.module.css'
 
-export default function Home() {
+export default function ComingSoon() {
 
   const [Days, setDays] = useState(7)
   const [Hours, setHours] = useState(24)
@@ -55,7 +55,7 @@ export default function Home() {
         </header>
 
         <div className={s.body}>
-          
+
           <h1>
             SOMETHING AWESOME IS <br /> COMING SOON
           </h1>
